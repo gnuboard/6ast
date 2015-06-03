@@ -1,6 +1,8 @@
 <?php
 error_reporting( E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_ERROR | E_WARNING | E_PARSE | E_USER_ERROR | E_USER_WARNING );
 
+set_time_limit(0);
+
 $g5['connect_db'] = sql_connect('localhost', '6ast', 'fast') or die('MySQL Connect Error!!!');
 $select_db  = sql_select_db('6ast', $g5['connect_db']) or die('MySQL DB Error!!!');
 
