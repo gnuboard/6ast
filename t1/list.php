@@ -25,14 +25,14 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
     //$num = $total_count - ($page - 1) * $page_rows - $k++;
     $num = $row[pid];
 
-    echo "<a href='./a_swap.php?act=up&pid=$row[pid]&page=$page' title='위 게시물과 교체'>▲</a> ";
-    echo "<a href='./a_swap.php?act=down&pid=$row[pid]&page=$page' title='아래 게시물과 교체'>▼</a>";
-    echo "&nbsp;".$num.'. '."$row[oid] <a href='./a_view.php?pid=$row[pid]&page=$page'>".$row['po_title']."</a> ($row[po_comment]) $row[po_datetime]";
+    echo "<a href='./swap.php?act=up&pid=$row[pid]&page=$page' title='위 게시물과 교체'>▲</a> ";
+    echo "<a href='./swap.php?act=down&pid=$row[pid]&page=$page' title='아래 게시물과 교체'>▼</a>";
+    echo "&nbsp;".$num.'. '."$row[oid] <a href='./view.php?pid=$row[pid]&page=$page'>".$row['po_title']."</a> ($row[po_comment]) $row[po_datetime]";
     echo "<br>";
 }
 
 echo "<br>";
-echo get_paging(10, $page, $total_page, './a_list.php?page=');
+echo get_paging(10, $page, $total_page, $_SERVER['PHP_SELF'].'?page=');
 
 echo "<br><br>";
 echo get_time() - $start;

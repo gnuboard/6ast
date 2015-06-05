@@ -36,4 +36,4 @@ if ($dest[oid]) {
     sql_query($sql);
 }
 
-header("location: ./a_list.php?page=$page");
+header("location: ./list.php?page=$page");

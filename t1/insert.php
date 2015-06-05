@@ -4,12 +4,12 @@ include_once('./common.php');
 $write_table = " g4_write_cm_free ";
 
 $post_table = 'a_post';
-$postcomment_table = 'a_postcomment';
+$comment_table = 'a_comment';
 
 sql_query(" truncate $post_table ");
 
 $sql = " select * from $write_table where wr_is_comment = 0 order by wr_num desc ";
-$sql.= " limit 20 ";
+$sql.= " limit 1000 ";
 $result = sql_query($sql);
 for ($i=0; $row=sql_fetch_array($result); $i++) {
     $sql2 = " select min(oid) as min_oid from $post_table ";
@@ -39,18 +39,19 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
     sql_query($sql3);
 }
 
-sql_query(" truncate $postcomment_table ");
+sql_query(" truncate $comment_table ");
 
 $sql = " select * from $post_table order by pid ";
 $result = sql_query($sql);
 for($i=0;$row=sql_fetch_array($result);$i++){
-    $sql2 = " select * from $write_table where wr_parent = '$row[wr_id]' and wr_is_comment = 1 order by wr_comment ";
+    $sql2 = " select * from $write_table where wr_parent = '$row[wr_id]' and wr_is_comment = 1 order by wr_comment desc ";
     $result2 = sql_query($sql2);
     for($k=0;$row2=sql_fetch_array($result2);$k++){
-        $sql3 = " insert $postcomment_table
+        $sql3 = " insert $comment_table
                      set pid = '$row[pid]',
                          pc_content = '".addslashes($row2[wr_content])."',
-                         pc_datetime = '".addslashes($row2[wr_datetime])."' 
+                         pc_datetime = '".addslashes($row2[wr_datetime])."',
+                         pc_ip = '".addslashes($row2[wr_ip])."' 
                          ";
         sql_query($sql3);
     }
