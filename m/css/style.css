@@ -38,8 +38,8 @@ table{border-collapse:collapse}
 #logo a{color:#fff; font-size:1.125em; font-weight:bold;}
 #logo a img{padding-left:9px;vertical-align:baseline}
 #btn_write{float: right;}
-#btn_write #new_write_btn{width:64px; height:28px; background: url(../img/button.gif) 50% 50% no-repeat; border:none;  font-size:0; text-indent:-99999px;}
-
+#btn_write a{display:block; border:1px solid #fff; /*width:57px; height:15px;*/ color:#fff; padding:4px 8px 4px 24px; background: url(../img/pencil.png) 10% 50% no-repeat; }
+/*#btn_write #new_write_btn{border:1px solid #fff; width:85px; height:31px; color:#fff; padding-left:12px; background: url(../img/pencil.png) 10% 50% no-repeat; }*/
 #header:after{clear:both; content:""; display:block}
 
 
