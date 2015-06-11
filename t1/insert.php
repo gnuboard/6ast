@@ -49,7 +49,9 @@ for($i=0;$row=sql_fetch_array($result);$i++){
     for($k=0;$row2=sql_fetch_array($result2);$k++){
         $sql3 = " insert $comment_table
                      set pid = '$row[pid]',
-                         pc_content = '".addslashes($row2[wr_content])."',
+                         mid         = '".addslashes($row2[mb_id])."',
+                         pc_name     = '".addslashes($row2[wr_name])."',
+                         pc_content  = '".addslashes($row2[wr_content])."',
                          pc_datetime = '".addslashes($row2[wr_datetime])."',
                          pc_ip = '".addslashes($row2[wr_ip])."' 
                          ";
