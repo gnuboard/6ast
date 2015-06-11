@@ -35,7 +35,7 @@ table{border-collapse:collapse}
 #header{width:100%; box-shadow:0 0 5px #888}
 #hd_wrapper{background:#4f667b; padding:20px 10px 10px; height:40px;}
 #logo{float:left;}
-#logo a{color:#fff; font-weight:bold; }
+#logo a{color:#fff; font-size:1.125em; font-weight:bold;}
 #logo a img{padding-left:9px;vertical-align:baseline}
 #btn_write{float: right;}
 #btn_write #new_write_btn{width:64px; height:28px; background: url(../img/button.gif) 50% 50% no-repeat; border:none;  font-size:0; text-indent:-99999px;}
@@ -47,13 +47,12 @@ table{border-collapse:collapse}
 
 .write_list{width:100%;}
 .write_list .wl{position:relative; height:100%; padding:10px; border-bottom:1px solid #dfdfdf;}
-.write_list .wl_thum{height:103px}
 .write_list .wl_absolute{position:absolute; left:118px;}
 .write_list .wl_title{top:17px; padding-bottom:14px;}
-.write_list .wl_title a{font-size:1.125em; color:#5e5e5e; font-weight:bold;}
-.write_list .wl_thum .wl_text{bottom:10px; margin-top:30px; line-height:;}
-.write_list .wl_text a{font-size:0.938em; color:#5e5e5e; line-height:1.375em;}
-.write_list .wl_img {width:49px; height:51px;}
+.write_list .wl_title a{font-size:1.125em; color:#000; font-weight:bold;}
+.write_list .wl_thum .wl_text{bottom:10px; padding-top:40px;}
+.write_list .wl_text a{color:#5e5e5e; line-height:137.5%/*1.571em*/;}
+.write_list .wl_img {/*width:49px; height:51px;*/ /*padding-bottom:10px*/}
 
 
 /*banner*/
