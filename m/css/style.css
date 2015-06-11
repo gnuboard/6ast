@@ -9,7 +9,7 @@ legend {position:absolute;width:1px;height:1px;font-size:0;text-indent:-9999em;l
 #sir-head ul, header ul, nav ul, #sir-tail ul {margin:0;padding:0;list-style:none}
 p {margin:0;padding:0 0 10px;line-height:1.8em;word-break:break-all}
 label, select, img, button {vertical-align:middle;} 
-textarea, input[type=text]{font-family:'돋움',dotum,helvetica; font-size:0.875em; border-radius:0;}
+textarea, input[type=text]{border-radius:0;}
 button {margin:0;border-radius:0;font-size:0.857em;font-family:'돋움',dotum,helvetica;cursor:pointer;border:0}
 input[type=text], input[type=password], input[type=submit], input[type=image], button {border-radius:0;-webkit-appearance:none;margin:0;padding:0}
 pre {overflow-x:scroll;font-size:1em}
@@ -68,15 +68,20 @@ table{border-collapse:collapse}
 .write h2{font-size:1.250em; font-weight:bold; padding-bottom:20px;}
 .write_area .w_title,
 .write_area .w_area{font-weight:bold; color:#5e5e5e; margin-bottom:10px; padding:0 10px 0 0 ;}
-.write_area .w_title label{padding-bottom:10px;font-weight:bold;}
-.write_area .w_title input, .write_area .w_area textarea{width:100%; border:1px solid #cdcdcd; background:#f4f4f4; margin:10px 0; padding:5px;}
+.write_area .w_title label{padding-bottom:10px; font-weight:bold;}
+.write_area .w_title input{height:20px}
+.write_area .w_title input,
+.write_area .w_area textarea{width:100%; border:1px solid #cdcdcd; background:#f4f4f4; margin:10px 0; padding:5px;}
 .write_area .w_file{padding-bottom:10px;}
 .write_area{padding-bottom:10px;}
 
-.bw_submit{color:#fff;width:100%; height:30px;border:1px solid #cdcdcd; background: #4f667b;}
+.w_sr input{float:left;  height:40px; border:1px solid #cdcdcd;}
+.w_submit{width:69%; background: #4f667b; color:#fff;}
+.w_reset{width:29%; margin-right:2%; color:#000; }
 
 
-/* contents_list */
+
+/* list */
 
 .contents_list{padding:10px 0; }
 .contents_list:after{display:block; content:""; clear:both;}
@@ -93,13 +98,12 @@ table{border-collapse:collapse}
 
 
 .search{width:100%; text-align:center; padding:20px 0;}
-.search input.stext_area{margin-left:5px; border:1px solid #cdcdcd; padding:5px}
-.search input.s_button{border:1px solid #cdcdcd; margin-left:5px;padding:3px 3px 4px 3px;}
+.search input.stext_area{margin-left:5px; border:1px solid #cdcdcd; padding:5px; width:30%;}
+.search input.s_button{border:1px solid #cdcdcd; margin-left:5px;padding:5px 4px 4px;}
 .page{width:100%; text-align:center; padding:10px 0;}
-.page span{border-left:1px solid #cdcdcd; padding:0 2px}
-.page span.first_page{border-left:none;}
-.page span.last_page{}
-.page span.prev_page,.page span.next_page{border-left:none;}
+.page span{padding:0 5px; font-size:1.214em;}
+.page span.page_num{border:1px solid #cdcdcd; width:3px; height:3px; padding:2px 7px 3px 7px;}
+.page span.prev_page img, .page span.next_page img{visibility: top; !important}
 
 
 

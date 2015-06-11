@@ -2,11 +2,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" name="viewport">
-	<title>글쓰기</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" name="viewport">
+    <title>글쓰기</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
 </head>
 <body>
 
@@ -16,7 +16,7 @@
     </div>
     <div id="hd_wrapper">
         <div id="logo">
-            <a href="#none">본격 글쓰는 사이트<img src="img/logo.png" alt="본격 글쓰는 사이트 써글" /></a>
+            <a href="index.html">본격 글쓰는 사이트<img src="img/logo.png" alt="본격 글쓰는 사이트 써글" /></a>
         </div>
         <div id="btn_write">
             <a href="post.html"><!-- <button id="new_write_btn" type="button"> -->글쓰기<!-- </button> --></a>
@@ -28,24 +28,32 @@
         <div class="write">
             <h2>글쓰기</h2>
             <section class="write_area">
-               <ul>
-                   <li>
-                        <div class="w_title">
-                            <label for="post_title">제목<input id="wr_subject" type="text" required="" value="" name="wr_subject">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w_area">
-                            <label for="post_content">내용<span><textarea id="wr_content" required="" name="wr_content" style="height: 200px;"></textarea></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w_file">
-                            <input id="image" class="" type="file" title="" name="image">
-                        </div>    
-                    </li>
-                </ul>
-                <input id="btn_submit" class="bw_submit" type="submit" accesskey="s" value="작성완료">
+                <form method="post" action="">
+                    <fieldset>
+                        <legend>글쓰기</legend>
+                            <ul>
+                                <li>
+                                    <div class="w_title">
+                                        <label for="post_title">제목</label><input id="wr_subject" type="text" required="" value="" name="wr_subject" tabindex="1" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="w_area">
+                                        <label for="post_content">내용</label><textarea id="wr_content" required="" name="wr_content" style="height: 200px;" tabindex="2"> </textarea>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="w_file">
+                                        <label for="post_file"><input class="" type="file" title="" name="image"></label>
+                                    </div>    
+                                </li>
+                            </ul>
+                    </fieldset>
+                </form>
+                <p class="w_sr">
+                    <input class="w_reset" type="reset" accesskey="s" value="취소" tabindex="4" />
+                    <input class="w_submit" type="submit" accesskey="s" value="작성완료" tabindex="3" />
+                </p>
             </section>
         </div>
     </div>

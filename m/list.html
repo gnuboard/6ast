@@ -2,11 +2,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" name="viewport">
-	<title>글목록</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" name="viewport">
+    <title>글목록</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
 </head>
 <body>
 
@@ -16,7 +16,7 @@
     </div>
     <div id="hd_wrapper">
         <div id="logo">
-            <a href="#none">본격 글쓰는 사이트<img src="img/logo.png" alt="본격 글쓰는 사이트 써글" /></a>
+            <a href="index.html">본격 글쓰는 사이트<img src="img/logo.png" alt="본격 글쓰는 사이트 써글" /></a>
         </div>
         <div id="btn_write">
             <a href="post.html"><!-- <button id="new_write_btn" type="button"> -->글쓰기<!-- </button> --></a>
@@ -170,21 +170,22 @@
                     </li>
                 </ul>
                 <div class="search">
-                    <form id="contents_sch" method="" name="contents_sch">
+                    <form method="post" name="contents_sch">
                         <fieldset>
-                            <label><input type="radio" velue="title" name="searchText" maxlength="30" >제목</label>
-                            <label><input type="radio" velue="content" name="searchText" maxlength="30" >내용</label>
+                            <legend>글찾기</legend>
+                            <label><input type="checkbox" value="title" name="searchText" maxlength="30" >제목</label>
+                            <label><input type="checkbox" value="content" name="searchText" maxlength="30" >내용</label>
                             <input type="text" name="searchText" maxlength="30" class="stext_area" ><input id="sch_submit" type="submit" value="검색" class="s_button">
                         </fieldset>
                     </form>
                 </div>
                 <div class="page">
                     <span class="prev_page"><a href="#none"><img src="img/prev_btn.jpg" alt="이전버튼" /></a></span>
-                    <span class="first_page"><a href="#none">1</a></span>
-                    <span><a href="#none">2</a></span>
-                    <span><a href="#none">3</a></span>
-                    <span><a href="#none">4</a></span>
-                    <span class="last_page"><a href="#none">5</a></span>
+                    <span class="page_num"><a href="#none">1</a></span>
+                    <span class="page_num"><a href="#none">2</a></span>
+                    <span class="page_num"><a href="#none">3</a></span>
+                    <span class="page_num"><a href="#none">4</a></span>
+                    <span class="page_num"><a href="#none">5</a></span>
                     <span class="next_page"><a href="#none"><img src="img/next_btn.jpg" alt="다음버튼" /></a></span>
                 </div>
             </section>
