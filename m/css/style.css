@@ -67,9 +67,9 @@ table{border-collapse:collapse}
 .write{padding:10px;}
 .write h2{font-size:1.250em; font-weight:bold; padding-bottom:20px;}
 .write_area .w_title{padding-bottom:10px;}
-.write_area .w_title, .write .w_area{font-size:1.125em; font-weight:bold; color:#5e5e5e;}
-.write_area .w_title label{padding-bottom:10px;}
-.write_area .w_title input, .write .w_area textarea{width:100%; border:1px solid #cdcdcd; background:#f4f4f4; margin-top:10px; padding-bottom:10px}
+.write_area .w_title, .write .w_area{font-weight:bold; color:#5e5e5e;}
+.write_area .w_title label{padding-bottom:10px;font-size:1.125em;}
+.write_area .w_title input, .write .w_area textarea{width:99%; border:1px solid #cdcdcd; background:#f4f4f4; margin:10px 0; padding:3px}
 .write_area .w_file{padding-bottom:10px;}
 .write_area{padding-bottom:10px;}
 
