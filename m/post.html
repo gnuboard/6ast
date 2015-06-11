@@ -19,17 +19,36 @@
             <a href="#none">본격 글쓰는 사이트<img src="img/logo.png" alt="본격 글쓰는 사이트 써글" /></a>
         </div>
         <div id="btn_write">
-            <button id="new_write_btn" type="button">글쓰기</button>
+            <a href="post.html"><!-- <button id="new_write_btn" type="button"> -->글쓰기<!-- </button> --></a>
         </div>  
     </div>
 </header>
 <div id="wrapper">
     <div id="contatiner">
-        <div class="write_list">
-          
-        </div>
-        <div class="banner">
-          <img src="img/banner.gif" alt="banner" />
+        <div class="write">
+            <h2>글쓰기</h2>
+            <form name="" id="" method="" action=" onsubmit="" enctype="" autocomplete=""> 
+            </form>
+            <section>
+               <ul class="write_area">
+                   <li>
+                        <div class="w_title">
+                            <label for="post_title">제목<input id="wr_subject" class="sir_inp sir_irq wr_subject" type="text" required="" value="" name="wr_subject">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="w_area">
+                            <label for="post_content">내용<span><textarea id="wr_content" required="" name="wr_content" style="height: 200px;"></textarea></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="w_file">
+                            <input id="image" class="" type="file" title="" name="image">
+                        </div>    
+                    </li>
+                </ul>
+                <input id="btn_submit" class="bw_submit" type="submit" accesskey="s" value="작성완료">
+            </section>
         </div>
     </div>
 </div>
