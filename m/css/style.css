@@ -92,17 +92,17 @@ table{border-collapse:collapse}
 .contents_list .first_ul{border-top:1px solid #dfdfdf}
 .contents_list ul{padding:10px; border-bottom:1px solid #dfdfdf}
 .contents_list .li_title{padding-bottom:5px;}
-.contents_list .li_info span{width:100%;font-size:0.750em; padding:0 8px; background: url('../img/bg_line.gif') no-repeat 0px 0px;}
-.contents_list .li_info span.info_nick{background: none}
+.contents_list .li_info span{width:100%;font-size:0.750em; padding:0 8px; background: url('../img/bg_line.gif') no-repeat 0px 2px;}
+.contents_list .li_info span.info_nick{background: none; padding:0 8px 0 0}
 
 
 .search{width:100%; text-align:center; padding:20px 0;}
 .search input.stext_area{margin-left:5px; border:1px solid #cdcdcd; padding:5px; width:30%;}
 .search input.s_button{border:1px solid #cdcdcd; margin-left:5px;padding:5px 4px 4px;}
-.page{width:100%; text-align:center; padding:10px 0;}
-.page span{padding:0 5px; font-size:1.214em;}
-.page span.page_num{border:1px solid #cdcdcd; width:3px; height:3px; padding:2px 7px 3px 7px;}
-.page span.prev_page img, .page span.next_page img{visibility: top; !important}
+.page{width:100%; text-align:center;}
+.page span{margin:0 3px; font-size:1.214em;}
+.page span.page_num a{border:1px solid #cdcdcd; height:21px; padding:2px 8px; display:inline-block}
+.page span.prev_page, .page span.next_page{vertical-align:top; padding:0}
 
 
 
