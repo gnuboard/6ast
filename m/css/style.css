@@ -14,7 +14,7 @@ button {margin:0;border-radius:0;font-size:0.857em;font-family:'돋움',dotum,he
 input[type=reset], input[type=text], input[type=password], input[type=submit], input[type=image], button {border-radius:0;-webkit-border-radius:0; -webkit-appearance:none; margin:0;padding:0}
 input[type="checkbox"]{width:16px; height:16px;vertical-align:middle}
 pre {overflow-x:scroll;font-size:1em}
-select {margin:0;/*font-size:0.857em;*/border:1px solid #dfdfdf; width:60px; height:33px; text-align:center; padding-left:6px}
+select {margin:0;/*font-size:0.857em;*/border:1px solid #dfdfdf; width:60px; height:33px; text-align:center; padding-left:6px; border-radius:none}
 hr {display:none}
 iframe#hiddenframe {display:none;width:0;height:0}
 a, a:link, a:visited, a:active {color:#000;text-decoration:none}
@@ -111,7 +111,7 @@ table{border-collapse:collapse}
 .contents_view h2{margin-left:10px; font-size:1.250em; font-weight:bold; padding:20px 0;}
 .con_head{border-top:1px solid #dfdfdf; border-bottom:1px solid #dfdfdf; padding:10px}
 .con_head .title_info{padding:10px 0}
-.con_head .title_info li{float:left; margin-left:10px; color:#959595}
+.con_head .title_info li{float:left; margin-left:10px; color:#959595; font-size:0.750em;}
 .con_head .title_info li.info_nick{margin:0px}
 .con_head .title_info li span{}
 .con_btn{padding:20px 0;}
@@ -121,6 +121,7 @@ table{border-collapse:collapse}
 .con_btn .zoom_btn li{float:left; margin-right:10px;}
 .con_btn .zoom_btn li a{border:1px solid #dfdfdf; padding:7px 10px; text-align:center;}
 .con_btn .zoom_btn li.fnt_zIn{margin-right:0px;}
+.con_btn .zoom_btn li.fnt_zOut{}
 .con_head:after{display:block; content:""; clear:both}
 
 .con_view{padding:10px}
@@ -128,25 +129,49 @@ table{border-collapse:collapse}
 .con_view  .con_in{}
 
 
-.con_out{display:inline-block; width:300px; height:50px; margin:0 auto; background: pink;}
+.con_out{width:162px;height:50px; margin:0 auto;}
 .con_out p{float:left; text-align:center; margin-left:10px}
 .con_out .reco{margin-left:0px}
 .con_out .reco a{width:70px; padding:3px 10px; border:1px solid #dfdfdf; display:block}
 .con_out .reco a span{color:#ff0000; padding-left:5px;}
 .con_out .reco select{width:20px; border:1px solid #dfdfdf;}
 
+.con_cmt_write{padding:10px 10px 0; border-bottom:1px solid #dfdfdf; border-top:1px solid #9f9f9f;}
+.con_cmt_write .cmt_align li{float:left;}
+.con_cmt_write .cmt_align li{overflow:hidden; padding:7px 0 7px 7px;}
+.con_cmt_write .cmt_align li.align_g{padding-left:15px; background: url('../img/cmt_align_bg.png') no-repeat 0px 7px;}
+.con_cmt_write .cmt_align li a{padding-right:10px;}
+.con_cmt_write .cmt_align li.align_o a{overflow: hidden;background: url('../img/check_bg.png') no-repeat 2px 6px #fff; padding:2px 14px;}
+.con_cmt_write .cmt_align li.align_o a:focus{overflow: hidden;background: url('../img/check_bg.png') no-repeat 2px -8px #fff; padding:2px 14px;}
+.con_cmt_write .cmt_align li.align_g a{overflow: hidden;background: url('../img/check_bg.png') no-repeat 2px -8px #fff; padding:2px 14px;}
+.con_cmt_write .cmt_align li.align_g a:focus{overflow: hidden;background: url('../img/check_bg.png') no-repeat 2px 6px #fff; padding:2px 14px;}
+
+.con_cmt_write .cmt_write_btn{float:right}
+.con_cmt_write .cmt_write_btn p a{padding:3px 10px; border:1px solid #dfdfdf; display:block; background: #fff}
+
+.con_cmt_write:after{clear:both; content:""; display:block}
+
 
 .con_cmt{}
-.con_cmt article{border-top:1px solid #dfdfdf; padding:10px}
-.con_cmt article.last_cmt{border-bottom:1px solid #dfdfdf; margin-bottom:20px}
+.con_cmt article{border-bottom:1px solid #dfdfdf; padding:10px}
+.con_cmt article.last_cmt{ margin-bottom:20px}
 .con_cmt .re_cmt{padding:20px 10px 10px 30px; background: url('../img/re.png') no-repeat 2% 6% #f0f0f0;}
+.con_cmt .cmt_view{padding-top:10px}
 .con_cmt .cmt_mem{padding-top:10px;}
-.con_cmt li{float:left; margin-left:10px; color:#959595;}
+.con_cmt .cmt_mem li{font-size:0.750em}
+.con_cmt li{float:left; margin-left:10px; color:#959595; font-size:;}
 .con_cmt li.info_nick{margin-left:0}
-.con_cmt li.info_report a{color:#ff0000;}
 .con_cmt .action_btn{padding:30px 0}
 .con_cmt .cmt_reply{clear:both; float:left}
 .con_cmt .cmt_action{float:right}
 .con_cmt .cmt_reply a{padding:3px 10px; border:1px solid #dfdfdf; display:block; background: #fff}
 .con_cmt .cmt_action a{padding:7px 10px; border:1px solid #dfdfdf; display:block; background: #fff}
 .con_cmt .cmt_reply a span,.con_cmt .cmt_action a span{color:#ff0000; padding-left:7px;}
+
+
+.re_cmt_box{padding:10px; border-bottom:1px solid #dfdfdf;}
+.re_cmt_area{padding:0 0 20px 0;} 
+.cmt_text textarea{width:100%;border:1px solid #dfdfdf;}
+.cmt_out input{height:30px; border:1px solid #cdcdcd; }
+.cmt_out .cmt_submit{float:right;width:69%; background: #fff}
+.cmt_out .cmt_reset{float:left;width:29%; margin-right:2%; color:#fff; background:#4f667b}

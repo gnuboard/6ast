@@ -7,6 +7,7 @@
     <meta content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" name="viewport">
     <title>글보기</title>
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
 </head>
 <body>
 
@@ -36,13 +37,52 @@
                     <li class="info_report"><a href="#none">신고</a></li>
                 </ul>
                 <div class="con_btn">
-                  <p class="cmt_btn"><a href="#con_cmt">댓글<span>9999</span></a></p>
+                  <p class="cmt_btn"><a href="#none">댓글<span>9999</span></a></p>
                   <ul class="zoom_btn">
-                      <li class="fnt_zOut"><a href="#none">- 가</a></li>
-                      <li class="fnt_zIn"><a href="#none">+ 가</a></li>
+                      <li class="fnt_zOut"><a href="javascript:zoomOut();">- 가</a></li>
+                      <li class="fnt_zIn"><a href="javascript:zoomIn();">+ 가</a></li>
                   </ul>
                 </div>
             </header>
+            
+            <script>
+                var nowZoom=100; // 현재비율
+                var maxZoom=200; // 최대비율(500으로하면 5배 커진다)
+                var minZoom=80; // 최소비율
+                 
+                //화면2
+                function zoomIn() {
+                
+                if (nowZoom < maxZoom) {
+                /// nowZoom += 10; //25%씩 커진다.
+                nowZoom += 4; //25%씩 커진다.
+                } else {
+                return;
+                }
+                document.body.style.zoom = nowZoom + "%";
+                }
+                 
+                //화면1
+                function zoomOut() {
+                if (nowZoom > minZoom) {
+                /// nowZoom -= 10; //25%씩 작아진다.
+                nowZoom -= 4; //25%씩 작아진다.
+                } else {
+                return;
+                }
+                document.body.style.zoom = nowZoom + "%";
+                }   
+                
+                
+                //화면1
+                function Base() {
+                
+                nowZoom = 100 //원래되로
+                
+                document.body.style.zoom = nowZoom + "%";
+                }   
+            </script>
+            
             <section class="con_view">
                 <article>
                     <div class="con_in">
@@ -65,23 +105,33 @@
                             <option><a href="#none">공유</a></option>
                         </select>    
                     </p>
-                    
                 </div>
                 <div class="banner">
                     <img src="img/banner.gif" alt="banner" />
                 </div>
             </section>
-            <section class="con_cmt_write"><!-- 댓글 쓰기 -->
+            <section class="con_cmt_write"> <!-- 글쓰기 및 정렬 -->
                 <article>
-                    <ul>
-                        <li><a href="#none">등록순</a></li>
-                        <li><a href="#none">추천순</a></li>
+                    <ul class="cmt_align">
+                        <li class="align_o"><a href="#none">등록순</a></li>
+                        <li class="align_g"><a href="#none">추천순</a></li>
                     </ul>
                 </article>
-                <article class="cmt_btn">
+                <article class="cmt_write_btn">
                     <p><a href="#none">댓글쓰기</a></p>
                 </article>                
             </section>
+            <article class="re_cmt_box">
+                <div class="re_cmt_area"><!-- 답변쓰기 -->
+                    <p class="cmt_text">
+                        <textarea id="cmt_textarea" required="" name="cmt_textarea" style="height:120px;" tabindex="1"> </textarea>
+                    </p>
+                    <p class="cmt_out">
+                        <input class="cmt_reset" type="reset" accesskey="s" value="취소" tabindex="3" />
+                        <input class="cmt_submit" type="submit" accesskey="s" value="댓글쓰기" tabindex="2" />
+                    </p>
+                </div>
+            </article>
             <section class="con_cmt">
             	<article>
             	    <div class="cmt_view"><!-- 댓글 -->
@@ -96,7 +146,7 @@
                         <li class="info_report"><a href="#none">신고</a></li>
 					</ul>
 					<div class="action_btn">
-					    <p class="cmt_reply"><a href="#none">답글<span>2</span></a></p>
+					    <p class="cmt_reply"><a class="cmt_reply_btn" href="javascript:;" title="comment_box">답글<span>2</span></a></p>
 					    <ul class="cmt_action">
 					        <li><a href="#none">좋아<span>99</span></a></li>
 					        <li><a href="#none">싫어<span>33</span></a></li>
@@ -105,7 +155,6 @@
             	</article>
             	<article class="re_cmt">
                     <div class="cmt_view"><!-- 대댓글 -->
-                        
                         <p>네 그럴땐 이렇게<br />
                                                       해보세요<br />
                                                       하하하하<br />
@@ -126,7 +175,6 @@
                 </article>
                 <article class="re_cmt">
                     <div class="cmt_view"><!-- 대댓글 -->
-                        
                         <p>네 그럴땐 이렇게<br />
                                                       해보세요<br />
                                                       하하하하<br />
@@ -194,6 +242,16 @@
                     <span class="page_num"><a href="#none">5</a></span>
                     <span class="next_page"><a href="#none"><img src="img/next_btn.jpg" alt="다음버튼" /></a></span>
                 </div>
+                <!-- 답변쓰기 -->
+                <!-- <article class="re_cmt_box">
+                    <div class="re_cmt_area">
+                        <p class="cmt_text"><textarea id="cmt_textarea" required="" name="cmt_textarea" style="height: 50px;" tabindex="1"> </textarea></p>
+                        <p class="cmt_out">
+                            <input class="cmt_reset" type="reset" accesskey="s" value="취소" tabindex="3" />
+                            <input class="cmt_submit" type="submit" accesskey="s" value="댓글쓰기" tabindex="2" />
+                        </p>
+                    </div>
+                </article> -->
             </section>         
         </div>
     </div>
