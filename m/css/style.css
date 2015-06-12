@@ -92,9 +92,8 @@ table{border-collapse:collapse}
 .contents_list .first_ul{border-top:1px solid #dfdfdf}
 .contents_list ul{padding:10px; border-bottom:1px solid #dfdfdf}
 .contents_list .li_title{padding-bottom:5px;}
-.contents_list .li_info span{width:100%;font-size:0.750em; border-left:1px solid #cdcdcd; padding-left:2px;/*background: url('../img/bg_line.png') no-repeat 1px 0;*/  }
-
-.contents_list .li_info span.info_nick{border-left:none}
+.contents_list .li_info span{width:100%;font-size:0.750em; padding:0 8px; background: url('../img/bg_line.gif') no-repeat 0px 0px;}
+.contents_list .li_info span.info_nick{background: none}
 
 
 .search{width:100%; text-align:center; padding:20px 0;}
