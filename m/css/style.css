@@ -101,8 +101,8 @@ table{border-collapse:collapse}
 .search input.s_button{border:1px solid #cdcdcd; margin-left:5px;padding:5px 4px 4px;}
 .page{width:100%; text-align:center;}
 .page span{margin:0 3px; font-size:1.214em;}
-.page span.page_num a{border:1px solid #cdcdcd; height:21px; padding:2px 8px; display:inline-block}
-.page span.prev_page, .page span.next_page{vertical-align:top; padding:0}
+.page span.page_num a{border:1px solid #cdcdcd; height:21px; padding:0px 6px; display:inline-block; vertical-align:middle}
+.page span.prev_page, .page span.next_page{vertical-align:top;}
 
 
 
