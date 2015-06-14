@@ -173,5 +173,5 @@ table{border-collapse:collapse}
 .re_cmt_area{padding:0 0 20px 0;} 
 .cmt_text textarea{width:100%;border:1px solid #dfdfdf;}
 .cmt_out input{height:30px; border:1px solid #cdcdcd; }
-.cmt_out .cmt_submit{float:right;width:69%; background: #fff}
-.cmt_out .cmt_reset{float:left;width:29%; margin-right:2%; color:#fff; background:#4f667b}
+.cmt_out .cmt_submit{float:right;width:69%; color:#fff; background:#4f667b}
+.cmt_out .cmt_reset{float:left;width:29%; margin-right:2%; background: #fff }
