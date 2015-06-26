@@ -1,0 +1,19 @@
+/*
+  Theme Name: CMS Factory
+  Author: JB
+  Version: 1.0
+*/
+
+#container {width: 920px; margin: 0 auto; padding: 20px; border: 1px solid #bcbcbc}
+#main:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+#content {width: 600px; float: left;}
+#sidebar {width: 300px; float: right;}
+
+.jb-thumbnail {float: left; margin: 0px 10px 10px 0px;}
+.jb-post-list {clear: both;}
+
+.jb-format-quote blockquote {
+  color: #28b779;
+  font-family: Georgia;
+  font-style: italic;
+}

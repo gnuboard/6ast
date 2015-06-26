@@ -1,0 +1,60 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" name="viewport">
+    <title>로그인</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+</head>
+<body>
+
+<header id="header">
+    <div class="to_content">
+        <a href="#container">본문 바로가기</a>
+    </div>
+    <div id="hd_wrapper">
+        <div id="logo">
+            <a href="index.html">본격 글쓰는 사이트<img src="img/logo.png" alt="본격 글쓰는 사이트 써글" /></a>
+        </div>
+        <div id="btn_write">
+            <a href="post.html"><!-- <button id="new_write_btn" type="button"> -->글쓰기<!-- </button> --></a>
+        </div>  
+    </div>
+</header>
+<div id="wrapper">
+    <div id="contatiner">
+        <div class="contents_login">
+            <h2>로그인</h2>
+            <section class="login">
+                <div class="login_info">
+                    <form action="" method="post" name="login_info">
+                        <fieldset>
+                            <legend>회원로그인</legend>  
+                            <label for="login_id">로그인</label><span><input type="text" value=""/></span>               
+                            <label for="login_pw">비밀번호</label><span><input type="text" value=""/></span>   
+                        </fieldset>           
+                    </form>
+                </div>
+                <div class="login_test">
+                    <form action="" method="post" name="login_test">
+                        <fieldset id="captcha" class="captcha">
+                            <legend>자동등록방지</legend>
+                            <span><img src="img/captcha_img.png" alt="captcha_img" /></span>
+                            <input type="text" placeholder=" 텍스트입력" name="captcha_key" />
+                            <button type="button" id="captcha_mp3" class="captcha_mp3">숫자음성듣기</button> 
+                            <button type="button" id="captcha_reload" class="captcha_reload">새로고침</button>       
+                        </fieldset>           
+                    </form>  
+                </div>
+                <div class="login_submit">
+                  <input id="sch_submit" type="submit" value="로그인" class="login_button">
+                </div>
+            </section>         
+        </div>
+    </div>
+</div>
+</body>
+</html>

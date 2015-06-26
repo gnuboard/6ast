@@ -1,0 +1,260 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" name="viewport">
+    <title>글보기</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+</head>
+<body>
+
+<header id="header">
+    <div class="to_content">
+        <a href="#container">본문 바로가기</a>
+    </div>
+    <div id="hd_wrapper">
+        <div id="logo">
+            <a href="index.html">본격 글쓰는 사이트<img src="img/logo.png" alt="본격 글쓰는 사이트 써글" /></a>
+        </div>
+        <div id="btn_write">
+            <a href="post.html"><!-- <button id="new_write_btn" type="button"> -->글쓰기<!-- </button> --></a>
+        </div>  
+    </div>
+</header>
+<div id="wrapper">
+    <div id="contatiner">
+        <div class="contents_view">
+            <h2>글보기</h2>
+            <header class="con_head">
+                <h3><strong>우리는 말 안하고 살 수가 없나</strong></h3>
+                <ul class="title_info">
+                    <li class="info_nick"><a href="#none">홍길동</a></li>
+                    <li class="info_date">2015.06.12 09:36:38<!-- <span>&#40;수정&#41; 2015.06.12 12:36:38</span> --></li>
+                    <li class="info_hit">조회수 <span>999</span></li>
+                    <li class="info_report"><a href="#none">신고</a></li>
+                </ul>
+                <div class="con_btn">
+                  <p class="cmt_btn"><a href="#none">댓글<span>9999</span></a></p>
+                  <ul class="zoom_btn">
+                      <li class="fnt_zOut"><a href="javascript:zoomOut();">- 가</a></li>
+                      <li class="fnt_zIn"><a href="javascript:zoomIn();">+ 가</a></li>
+                  </ul>
+                </div>
+            </header>
+            
+            <script>
+                var nowZoom=100; // 현재비율
+                var maxZoom=200; // 최대비율(500으로하면 5배 커진다)
+                var minZoom=80; // 최소비율
+                 
+                //화면2
+                function zoomIn() {
+                
+                if (nowZoom < maxZoom) {
+                /// nowZoom += 10; //25%씩 커진다.
+                nowZoom += 4; //25%씩 커진다.
+                } else {
+                return;
+                }
+                document.body.style.zoom = nowZoom + "%";
+                }
+                 
+                //화면1
+                function zoomOut() {
+                if (nowZoom > minZoom) {
+                /// nowZoom -= 10; //25%씩 작아진다.
+                nowZoom -= 4; //25%씩 작아진다.
+                } else {
+                return;
+                }
+                document.body.style.zoom = nowZoom + "%";
+                }   
+                
+                
+                //화면1
+                function Base() {
+                
+                nowZoom = 100 //원래되로
+                
+                document.body.style.zoom = nowZoom + "%";
+                }   
+            </script>
+            
+            <section class="con_view">
+                <article>
+                    <div class="con_in">
+                        <p>날으는 솔개처럼<br />
+                                                나는 나는 갯바위 당신은 나를 사랑하는 파도 어느 고운 바람 불던 날<br />
+                                                잔잔히 다가와 부드러운 손길로 나를 감싸고<br />
+                                                향기로운 입술도 내게 주었지<br />
+                                                세찬 비바람에 내 몸이 패이고<br />
+                        <br />                         
+                                                이럴땐 어떨게 해야하나요?
+                        </p>
+                    </div>
+                </article>
+                <div class="con_out">
+                    <p class="reco"><a href="#none">추천<span>7777</span></a></p>
+                    <p>
+                        <select name="share">
+                            <option selected=""><a href="#none">공유1</a></option>
+                            <option><a href="#none">공유2</a></option>
+                            <option><a href="#none">공유3</a></option>
+                        </select>    
+                    </p>
+                </div>                
+                <div class="banner">
+                    <img src="img/banner.gif" alt="banner" />
+                </div>
+            </section>
+            <section class="con_cmt_write"> <!-- 글쓰기 및 정렬 -->
+                <article>
+                    <ul class="cmt_align">
+                        <li class="align_o"><a href="#none">등록순</a></li>
+                        <li class="align_g"><a href="#none">추천순</a></li>
+                    </ul>
+                </article>
+                <article class="cmt_write_btn">
+                    <p><a href="#none">댓글쓰기</a></p>
+                </article>                
+            </section>
+            <article class="re_cmt_box">
+                <div class="re_cmt_area"><!-- 답변쓰기 -->
+                    <p class="cmt_text">
+                        <textarea id="cmt_textarea" required="" name="cmt_textarea" style="height:120px;" tabindex="1"> </textarea>
+                    </p>
+                    <p class="cmt_out">
+                        <input class="cmt_reset" type="reset" accesskey="s" value="취소" tabindex="3" />
+                        <input class="cmt_submit" type="submit" accesskey="s" value="댓글쓰기" tabindex="2" />
+                    </p>
+                </div>
+            </article>
+            <section class="con_cmt">
+            	<article>
+            	    <div class="cmt_view"><!-- 댓글 -->
+					    <p>네 그럴땐 이렇게<br />
+    					      해보세요<br />
+    					      하하하하<br />
+					    </p>
+					</div>
+					<ul class="cmt_mem">
+					    <li class="info_nick"><a href="#none">홍길동</a></li>
+                        <li class="info_date">2015.06.12 09:36:38</li>
+                        <li class="info_report"><a href="#none">신고</a></li>
+					</ul>
+					<div class="action_btn">
+					    <p class="cmt_reply"><a class="cmt_reply_btn" href="javascript:;" title="comment_box">답글<span>2</span></a></p>
+					    <ul class="cmt_action">
+					        <li><a href="#none">좋아<span>99</span></a></li>
+					        <li><a href="#none">싫어<span>33</span></a></li>
+					    </ul>
+					</div>
+            	</article>
+            	<article class="re_cmt">
+                    <div class="cmt_view"><!-- 대댓글 -->
+                        <p>네 그럴땐 이렇게<br />
+                                                      해보세요<br />
+                                                      하하하하<br />
+                        </p>
+                    </div>
+                    <ul class="cmt_mem">
+                        <li class="info_nick"><a href="#none">홍길동</a></li>
+                        <li class="info_date">2015.06.12 09:36:38</li>
+                        <li class="info_report"><a href="#none">신고</a></li>
+                    </ul>
+                    <div class="action_btn">
+                        <p class="cmt_reply"><a href="#none">답글<span>2</span></a></p>
+                        <ul class="cmt_action">
+                            <li><a href="#none">좋아<span>99</span></a></li>
+                            <li><a href="#none">싫어<span>33</span></a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="re_cmt">
+                    <div class="cmt_view"><!-- 대댓글 -->
+                        <p>네 그럴땐 이렇게<br />
+                                                      해보세요<br />
+                                                      하하하하<br />
+                        </p>
+                    </div>
+                    <ul class="cmt_mem">
+                        <li class="info_nick"><a href="#none">홍길동</a></li>
+                        <li class="info_date">2015.06.12 09:36:38</li>
+                        <li class="info_report"><a href="#none">신고</a></li>
+                    </ul>
+                    <div class="action_btn">
+                        <p class="cmt_reply"><a href="#none">답글<span>2</span></a></p>
+                        <ul class="cmt_action">
+                            <li><a href="#none">좋아<span>99</span></a></li>
+                            <li><a href="#none">싫어<span>33</span></a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article>
+                    <div class="cmt_view"><!-- 댓글 -->
+                        <p>네 그럴땐 이렇게<br />
+                                                      해보세요<br />
+                                                      하하하하<br />
+                        </p>
+                    </div>
+                    <ul class="cmt_mem">
+                        <li class="info_nick"><a href="#none">홍길동</a></li>
+                        <li class="info_date">2015.06.12 09:36:38</li>
+                        <li class="info_report"><a href="#none">신고</a></li>
+                    </ul>
+                    <div class="action_btn">
+                        <p class="cmt_reply"><a href="#none">답글<span>2</span></a></p>
+                        <ul class="cmt_action">
+                            <li><a href="#none">좋아<span>99</span></a></li>
+                            <li><a href="#none">싫어<span>33</span></a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="last_cmt">
+                    <div class="cmt_view"><!-- 댓글 -->
+                        <p>네 그럴땐 이렇게<br />
+                                                      해보세요<br />
+                                                      하하하하<br />
+                        </p>
+                    </div>
+                    <ul class="cmt_mem">
+                        <li class="info_nick"><a href="#none">홍길동</a></li>
+                        <li class="info_date">2015.06.12 09:36:38</li>
+                        <li class="info_report"><a href="#none">신고</a></li>
+                    </ul>
+                    <div class="action_btn">
+                        <p class="cmt_reply"><a href="#none">답글<span>2</span></a></p>
+                        <ul class="cmt_action">
+                            <li><a href="#none">좋아<span>99</span></a></li>
+                            <li><a href="#none">싫어<span>33</span></a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="page">
+                    <span class="prev_page"><a href="#none"><img src="img/prev_btn.jpg" alt="이전버튼" /></a></span>
+                    <span class="page_num"><a href="#none">1</a></span>
+                    <span class="page_num"><a href="#none">22</a></span>
+                    <span class="page_num"><a href="#none">333</a></span>
+                    <span class="page_num"><a href="#none">44</a></span>
+                    <span class="page_num"><a href="#none">5</a></span>
+                    <span class="next_page"><a href="#none"><img src="img/next_btn.jpg" alt="다음버튼" /></a></span>
+                </div>
+                <!-- 답변쓰기 -->
+                <!-- <article class="re_cmt_box">
+                    <div class="re_cmt_area">
+                        <p class="cmt_text"><textarea id="cmt_textarea" required="" name="cmt_textarea" style="height: 50px;" tabindex="1"> </textarea></p>
+                        <p class="cmt_out">
+                            <input class="cmt_reset" type="reset" accesskey="s" value="취소" tabindex="3" />
+                            <input class="cmt_submit" type="submit" accesskey="s" value="댓글쓰기" tabindex="2" />
+                        </p>
+                    </div>
+                </article> -->
+            </section>         
+        </div>
+    </div>
+</div>
+</body>
+</html>
